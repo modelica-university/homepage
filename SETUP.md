@@ -7,6 +7,27 @@ using `next` and TypeScript. I'm specifically interested in a configuration that
 `export` functionality of `next` to produce what is basically a static,
 server-side rendered web site that integrates dynamic functionality once loaded.
 
+## TL;DR
+
+```
+$ npm init
+$ yarn add next react react-dom
+$ yarn add @zeit/next-typescript @zeit-css
+$ yarn add -D typescript @types/react @types/react-dom
+$ yarn add -D serve
+```
+
+and `next.config.js` should contain:
+
+```
+const withTypescript = require("@zeit/next-typescript");
+const withCSS = require("@zeit/next-css");
+
+module.exports = withTypescript(withCSS());
+```
+
+Create your first page in `pages/index.tsx`.
+
 ## Installation
 
 First, initialize your current directory as an `npm` package:
@@ -35,7 +56,7 @@ $ yarn add next react@next react-dom@next
 Since we want to use TypeScript, we need to add a few more dependencies:
 
 ```
-$ yarn add @zeit/next-typescript \@zeit-css
+$ yarn add @zeit/next-typescript @zeit-css
 $ yarn add -D typescript @types/react @types/react-dom
 ```
 
@@ -122,5 +143,9 @@ time the site can be served by an ordinary web server without the need for
 ## Component Models
 
 ## Routes
+
+## Initial Props
+
+## CSS Framework
 
 ## Conclusion
