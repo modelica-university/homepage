@@ -26,7 +26,22 @@ const withCSS = require("@zeit/next-css");
 module.exports = withTypescript(withCSS());
 ```
 
+and `.babelrc` must include:
+
+```
+{
+    "presets": ["next/babel", "@zeit/next-typescript/babel"]
+}
+```
+
 Create your first page in `pages/index.tsx`.
+
+You can use Netlify to deploy if you:
+
+-   Associate the GitHub repository with a site,
+-   Set the `base` directory to `.`
+-   Use `yarn build && yarn export` as the `build` command
+-   Specify `out` as the `publish` directory.
 
 ## Installation
 
@@ -84,6 +99,18 @@ const withCSS = require("@zeit/next-css");
 module.exports = withTypescript(withCSS());
 ```
 
+It is also necessary to tell `babel` what is going on, apparently. So you need
+to set your `.babelrc` file to be:
+
+```
+{
+    "presets": ["next/babel", "@zeit/next-typescript/babel"]
+}
+```
+
+Otherwise, your `.ts` and `.tsx` files will be used but won't really be properly
+processed by `babel` leading to all kind of strange error messages.
+
 ## Initial Content
 
 We are now ready to create our first "page". We start by creating a directory
@@ -139,6 +166,18 @@ time the site can be served by an ordinary web server without the need for
 `next` to be installed at all.
 
 ## Deployment
+
+You can use Netlify to easily deploy a site. All you need to do is sign up for
+Netlify and then create a new deployment site that is tied to the GitHub
+repository. While you can drop a `netlify.toml` file into your project, you can
+also simply set the following parameters in your "Build & deploy > Continuous
+Deployment > Build settings":
+
+-   **Base directory**: `.`
+-   **Build command**: `yarn build && yarn export`
+-   **Publish directory**: `./out`
+
+There are plenty of other configuration options. But this will get it going.
 
 ## Component Models
 
