@@ -5,8 +5,7 @@ module.exports = withTypescript(
     withCSS({
         exportPathMap: async defaultPathMap => {
             return {
-                "/": { page: "/index", query: { lang: "English" } },
-                "/fr": { page: "/index", query: { lang: "French" } },
+                "/": { page: "/index", query: {} },
             };
         },
     }),
