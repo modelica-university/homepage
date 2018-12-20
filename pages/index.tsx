@@ -8,13 +8,13 @@ interface IndexProps {
 const Index = (props: IndexProps) => {
     return (
         <div>
-            <Header title="Modelica University" logo="/static/logo.png" />
+            <Header height={80} title="Modelica University" logo="/static/logo.png" />
             <div
                 style={{
                     display: "flex",
                     flexDirection: "column",
                     backgroundImage: "linear-gradient(#076ee1, #84E5F9)",
-                    height: "100vh",
+                    minHeight: "calc(100vh - 80px)",
                 }}
             >
                 <div style={{ display: "flex", justifyContent: "space-around", color: "#eeeeee" }}>
@@ -23,7 +23,7 @@ const Index = (props: IndexProps) => {
                 <div style={{ display: "flex", justifyContent: "space-around", color: "#eeeeee" }}>
                     <h2 style={{ marginTop: 0 }}>A curated collection of resources to help you learn Modelica</h2>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-around", paddingTop: 30, flexWrap: "wrap" }}>
+                <div style={{ display: "flex", justifyContent: "space-around", paddingTop: 30, flexWrap: "wrap", flexGrow: 1 }}>
                     <Item
                         title={<img style={{ marginBottom: -4 }} height="32" src="/static/ModelicaByExample.png" />}
                         audience="beginner"
@@ -53,9 +53,9 @@ const Index = (props: IndexProps) => {
                         </p>
                     </Item>
                 </div>
-            </div>
-            <div style={{ width: "100%", position: "fixed", bottom: 0, right: 10 }}>
-                <Footer />
+                <div style={{ width: "100%" }}>
+                    <Footer height={"2em"} />
+                </div>
             </div>
         </div>
     );

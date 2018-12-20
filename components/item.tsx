@@ -12,7 +12,7 @@ export interface ItemProps {
 export const Item = (props: ItemProps) => {
     return (
         <Card
-            style={{ margin: 10, width: "30vw", minWidth: 375, height: "20em" }}
+            style={{ margin: 10, width: "30vw", minWidth: 375, height: "16em" }}
             interactive={true}
             elevation={Elevation.ZERO}
             onClick={() => (window.location.href = props.href)}
@@ -30,7 +30,7 @@ export const Item = (props: ItemProps) => {
                     {props.title}
                 </h5>
                 <h5 style={{ marginTop: 0, color: "#008800" }}>Audience: {props.audience}</h5>
-                <div style={{ flexGrow: 1 }}>{props.children}</div>
+                <div style={{ overflowY: "scroll", flexGrow: 1 }}>{props.children}</div>
                 <Button onClick={() => (window.location.href = props.href)}>View</Button>
             </div>
         </Card>

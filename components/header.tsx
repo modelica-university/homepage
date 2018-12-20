@@ -3,6 +3,7 @@ import React from "react";
 export interface HeaderProps {
     title: string;
     logo: string;
+    height: number;
 }
 
 export const Header = (props: HeaderProps) => {
@@ -11,7 +12,7 @@ export const Header = (props: HeaderProps) => {
             style={{
                 borderBottom: "1px solid #84E5F9",
                 paddingTop: 10,
-                height: 80,
+                height: props.height,
                 color: "white",
                 backgroundColor: "#076EE1",
                 display: "flex",
