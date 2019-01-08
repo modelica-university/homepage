@@ -8,7 +8,7 @@ interface IndexProps {
 const Index = (props: IndexProps) => {
     return (
         <div>
-            <Header height={80} title="Modelica University" logo="/static/logo.png" />
+            <Header height={80} title="Modelica University" logo="/static/mu-logo.svg" />
             <div
                 style={{
                     display: "flex",
@@ -23,7 +23,15 @@ const Index = (props: IndexProps) => {
                 <div style={{ display: "flex", justifyContent: "space-around", color: "#eeeeee" }}>
                     <h2 style={{ marginTop: 0 }}>A curated collection of resources to help you learn Modelica</h2>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-around", paddingTop: 30, flexWrap: "wrap", flexGrow: 1 }}>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                        paddingTop: 30,
+                        flexWrap: "wrap",
+                        flexGrow: 1,
+                    }}
+                >
                     <Item
                         title={<img style={{ marginBottom: -4 }} height="32" src="/static/ModelicaByExample.png" />}
                         audience="beginner"
