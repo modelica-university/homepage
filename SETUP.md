@@ -23,7 +23,7 @@ the super condensed version:
 
 ```
 $ npm init
-$ yarn add next react react-dom @zeit/next-typescript @zeit-css
+$ yarn add next react react-dom @zeit/next-typescript @zeit/next-css
 $ yarn add -D typescript @types/react @types/react-dom @types/next serve webpack @babel/core
 ```
 
@@ -96,7 +96,7 @@ $ yarn add next react@next react-dom@next
 Since we want to use TypeScript, we need to add a few more dependencies:
 
 ```
-$ yarn add @zeit/next-typescript @zeit-css
+$ yarn add @zeit/next-typescript @zeit/next-css
 $ yarn add -D typescript @types/react @types/react-dom @types/next
 ```
 
