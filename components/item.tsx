@@ -31,7 +31,9 @@ export const Item = (props: ItemProps) => {
                 </h5>
                 <h5 style={{ marginTop: 0, color: "#008800" }}>Audience: {props.audience}</h5>
                 <div style={{ overflowY: "scroll", flexGrow: 1 }}>{props.children}</div>
-                <Button onClick={() => (window.location.href = props.href)}>View</Button>
+                <a className="bp3-button" role="button" href={props.href}>
+                    View
+                </a>
             </div>
         </Card>
     );
