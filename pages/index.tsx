@@ -35,13 +35,13 @@ const Index = (props: IndexProps) => {
                     <Item
                         title={<img style={{ marginBottom: -4 }} height="32" src="/static/ModelicaByExample.png" />}
                         audience="beginner"
-                        href="http://book.xogeny.com"
+                        href="http://mbe.modelica.university"
                     >
                         <div>
                             <p>A book that teaches Modelica from the bottom up</p>
                         </div>
                     </Item>
-                    <Item title="Quick Reference" audience="intermediate" href="http://book.xogeny.com">
+                    <Item title="Quick Reference" audience="intermediate" href="https://webref.modelica.university">
                         <p>A cheatsheet that lists common Modelica constructs on a single page</p>
                     </Item>
                     <Item title="Will There be a Whiteboard?" audience="intermediate" href="http://blog.xogeny.com">
