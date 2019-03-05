@@ -19,9 +19,9 @@ export const Header = (props: HeaderProps) => {
                 width: "100%",
             }}
         >
-            <div style={{ float: "left" }}>
+            {/* <div style={{ float: "left" }}>
                 <img src={props.logo} width="64" height="64" />
-            </div>
+            </div> */}
             <h1 style={{ margin: "auto" }}>
                 <span style={{ position: "relative", bottom: 5, right: -10 }}>{props.title}</span>
             </h1>
