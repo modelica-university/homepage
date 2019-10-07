@@ -44,7 +44,7 @@ const Index = (props: IndexProps) => {
                     <Item title="Quick Reference" audience="intermediate" href="https://webref.modelica.university">
                         <p>A cheatsheet that lists common Modelica constructs on a single page</p>
                     </Item>
-                    <Item title="Will There be a Whiteboard?" audience="intermediate" href="http://blog.xogeny.com">
+                    <Item title="Will There be a Whiteboard?" audience="intermediate" href="http://whiteboard.modelica.university">
                         <p>
                             Dr. Michael Tiller's blog in which he discusses various topics related to modeling,
                             simulation, engineering and software
