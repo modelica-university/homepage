@@ -24,7 +24,7 @@
         "@types/next": "^7.0.5",
         "@types/react": "^16.7.17",
         "@types/react-dom": "^16.0.11",
-        "serve": "^10.1.1",
+        "serve": "^10.1.2",
         "typescript": "^3.2.2",
         "webpack": "^4.27.1"
     }
