@@ -1,35 +1,13 @@
 import React from "react";
 import { Item, Header, Footer } from "../components";
+import { libraryTheme } from "./theme";
 
 interface IndexProps {
   language: string;
 }
 
-export interface ThemeProps {
-  headerColor: string;
-  backgroundImage: string;
-  backgroundCreditLink: string;
-  headerBackgroundColor: string;
-}
-
-const libraryTheme: ThemeProps = {
-  headerColor: "#fff",
-  backgroundImage:
-    "linear-gradient(to right, rgba(255,255,255, 0.2) 0 100%), url('/static/images/library.jpg')",
-  backgroundCreditLink: "https://unsplash.com/photos/PoE6Q48B-5k",
-  headerBackgroundColor: "rgba(232,182,79,0.2)",
-};
-
-const bookshelfTheme: ThemeProps = {
-  headerColor: "#fff",
-  backgroundImage:
-    "linear-gradient(to right, rgba(255,255,255, 0.3) 0 100%), url('/static/images/bookshelf.jpg')",
-  backgroundCreditLink: "https://unsplash.com/photos/NIJuEQw0RKg",
-  headerBackgroundColor: "rgba(25,25,25, .8)",
-};
-
 const Index = (props: IndexProps) => {
-  const theme = bookshelfTheme;
+  const theme = libraryTheme;
   return (
     <div
       style={{
@@ -61,13 +39,19 @@ const Index = (props: IndexProps) => {
             style={{
               fontFamily: "Cormorant",
               textTransform: "uppercase",
-              fontSize: "36px",
+              fontSize: "300%",
               marginBottom: 0,
             }}
           >
             Modelica University
           </h1>
-          <h2 style={{ fontFamily: "Dancing Script", marginTop: 0 }}>
+          <h2
+            style={{
+              fontFamily: "Dancing Script",
+              fontSize: "200%",
+              marginTop: 0,
+            }}
+          >
             A curated collection of resources to help you learn Modelica
           </h2>
         </div>
@@ -152,7 +136,7 @@ const Index = (props: IndexProps) => {
           </Item>
         </div>
         <div style={{ width: "100%" }}>
-          <Footer color={theme.headerColor} height={"2em"} />
+          <Footer theme={theme} height={"2em"} />
         </div>
       </div>
     </div>

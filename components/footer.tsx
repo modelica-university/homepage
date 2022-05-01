@@ -1,18 +1,43 @@
 import React from "react";
+import { libraryTheme, ThemeProps } from "../pages/theme";
 
 export interface FooterProps {
   height: number | string;
-  color: string;
+  theme: ThemeProps;
 }
 
 export const Footer = (props: FooterProps) => {
   return (
     <div
-      style={{ height: props.height, backgroundColor: "rgba(255,255,255,0.4)" }}
+      style={{
+        height: props.height,
+        backgroundColor: props.theme.headerBackgroundColor,
+      }}
     >
-      <p style={{ color: props.color, float: "right" }}>
+      <p
+        style={{
+          marginLeft: "1em",
+          color: props.theme.headerColor,
+          float: "left",
+        }}
+      >
+        Background photo by{" "}
+        <a className="footer" href={props.theme.backgroundCreditLink}>
+          {props.theme.backgroundCredit}
+        </a>
+      </p>
+      <p
+        style={{
+          color: props.theme.headerColor,
+          float: "right",
+          marginRight: "1em",
+        }}
+      >
         Modelica is a registered trademark of the{" "}
-        <a href="http://www.modelica.org">Modelica Association</a>.{" "}
+        <a className="footer" href="http://www.modelica.org">
+          Modelica Association
+        </a>
+        .{" "}
       </p>
     </div>
   );

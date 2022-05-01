@@ -2,6 +2,14 @@ body {
   margin: 0px;
 }
 
+a.footer:visited {
+  color: #dad0bb;
+}
+
+a.footer:visited {
+  color: #dad0bb;
+}
+
 /* #fullscreen::before {
   content: "";
   background-image: url("static/images/library.jpg");
