@@ -5,28 +5,39 @@ interface IndexProps {
   language: string;
 }
 
-const headerColor = "#fff";
+export interface ThemeProps {
+  headerColor: string;
+  backgroundImage: string;
+  backgroundCreditLink: string;
+  headerBackgroundColor: string;
+}
 
-// #eab64e
+const libraryTheme: ThemeProps = {
+  headerColor: "#fff",
+  backgroundImage:
+    "linear-gradient(to right, rgba(255,255,255, 0.2) 0 100%), url('/static/images/library.jpg')",
+  backgroundCreditLink: "https://unsplash.com/photos/PoE6Q48B-5k",
+  headerBackgroundColor: "rgba(232,182,79,0.2)",
+};
+
+const bookshelfTheme: ThemeProps = {
+  headerColor: "#fff",
+  backgroundImage:
+    "linear-gradient(to right, rgba(255,255,255, 0.3) 0 100%), url('/static/images/bookshelf.jpg')",
+  backgroundCreditLink: "https://unsplash.com/photos/NIJuEQw0RKg",
+  headerBackgroundColor: "rgba(25,25,25, .8)",
+};
+
 const Index = (props: IndexProps) => {
+  const theme = bookshelfTheme;
   return (
     <div
       style={{
         backgroundSize: "cover",
-        // backgroundImage:
-        //   "linear-gradient(to right, rgba(255,255,255, 0.7) 0 100%), url('/static/images/library.jpg')",
-        backgroundImage:
-          "linear-gradient(to right, rgba(255,255,255, 0.2) 0 100%), url('/static/images/library.jpg')",
-        // backgroundImage: "url('/static/images/library.jpg')",
-        opacity: 1.0,
+        backgroundImage: theme.backgroundImage,
         minHeight: "100vh",
       }}
     >
-      {/* <Header
-        height={80}
-        title="Modelica University"
-        logo="/static/mu-logo.svg"
-      /> */}
       <div
         id="fullscreen"
         style={{
@@ -39,18 +50,24 @@ const Index = (props: IndexProps) => {
         <div
           style={{
             display: "flex",
-            //backgroundColor: "rgba(232,182,79,0.2)",
-            backgroundColor: "rgba(232,182,79,0.2)",
+            backgroundColor: theme.headerBackgroundColor,
             textAlign: "center",
             flexDirection: "column",
             justifyContent: "space-around",
-            color: headerColor,
+            color: theme.headerColor,
           }}
         >
-          <h1 style={{ fontSize: "36px", marginBottom: 0 }}>
+          <h1
+            style={{
+              fontFamily: "Cormorant",
+              textTransform: "uppercase",
+              fontSize: "36px",
+              marginBottom: 0,
+            }}
+          >
             Modelica University
           </h1>
-          <h2 style={{ marginTop: 0 }}>
+          <h2 style={{ fontFamily: "Dancing Script", marginTop: 0 }}>
             A curated collection of resources to help you learn Modelica
           </h2>
         </div>
@@ -135,7 +152,7 @@ const Index = (props: IndexProps) => {
           </Item>
         </div>
         <div style={{ width: "100%" }}>
-          <Footer color={headerColor} height={"2em"} />
+          <Footer color={theme.headerColor} height={"2em"} />
         </div>
       </div>
     </div>
