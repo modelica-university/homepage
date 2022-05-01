@@ -5,8 +5,9 @@ interface IndexProps {
   language: string;
 }
 
-const headerColor = "white";
+const headerColor = "#fff";
 
+// #eab64e
 const Index = (props: IndexProps) => {
   return (
     <div
@@ -38,6 +39,10 @@ const Index = (props: IndexProps) => {
         <div
           style={{
             display: "flex",
+            //backgroundColor: "rgba(232,182,79,0.2)",
+            backgroundColor: "rgba(232,182,79,0.2)",
+            textAlign: "center",
+            flexDirection: "column",
             justifyContent: "space-around",
             color: headerColor,
           }}
@@ -45,14 +50,6 @@ const Index = (props: IndexProps) => {
           <h1 style={{ fontSize: "36px", marginBottom: 0 }}>
             Modelica University
           </h1>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-around",
-            color: headerColor,
-          }}
-        >
           <h2 style={{ marginTop: 0 }}>
             A curated collection of resources to help you learn Modelica
           </h2>
