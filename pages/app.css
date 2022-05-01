@@ -1,3 +1,15 @@
 body {
-    margin: 0px;
+  margin: 0px;
 }
+
+/* #fullscreen::before {
+  content: "";
+  background-image: url("static/images/library.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+} */

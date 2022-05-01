@@ -5,38 +5,52 @@ interface IndexProps {
   language: string;
 }
 
+const headerColor = "white";
+
 const Index = (props: IndexProps) => {
   return (
-    <div>
-      <Header
+    <div
+      style={{
+        backgroundSize: "cover",
+        // backgroundImage:
+        //   "linear-gradient(to right, rgba(255,255,255, 0.7) 0 100%), url('/static/images/library.jpg')",
+        backgroundImage:
+          "linear-gradient(to right, rgba(255,255,255, 0.2) 0 100%), url('/static/images/library.jpg')",
+        // backgroundImage: "url('/static/images/library.jpg')",
+        opacity: 1.0,
+        minHeight: "100vh",
+      }}
+    >
+      {/* <Header
         height={80}
         title="Modelica University"
         logo="/static/mu-logo.svg"
-      />
+      /> */}
       <div
+        id="fullscreen"
         style={{
           display: "flex",
           flexDirection: "column",
-          backgroundImage: "linear-gradient(#076ee1, #84E5F9)",
-          minHeight: "calc(100vh - 80px)",
+          opacity: 1.0,
+          minHeight: "100vh",
         }}
       >
         <div
           style={{
             display: "flex",
             justifyContent: "space-around",
-            color: "#eeeeee",
+            color: headerColor,
           }}
         >
           <h1 style={{ fontSize: "36px", marginBottom: 0 }}>
-            Modelica Educational Resources
+            Modelica University
           </h1>
         </div>
         <div
           style={{
             display: "flex",
             justifyContent: "space-around",
-            color: "#eeeeee",
+            color: headerColor,
           }}
         >
           <h2 style={{ marginTop: 0 }}>
@@ -124,7 +138,7 @@ const Index = (props: IndexProps) => {
           </Item>
         </div>
         <div style={{ width: "100%" }}>
-          <Footer height={"2em"} />
+          <Footer color={headerColor} height={"2em"} />
         </div>
       </div>
     </div>
